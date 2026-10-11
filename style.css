@@ -1,0 +1,41 @@
+/* Same palette as the app (Vakit theme): paper, lapis panel, turquoise, gold. */
+:root {
+  --paper: #EAF3F4; --ink: #0D2140; --ink-soft: #4D6478;
+  --panel: #163C8C; --on-panel: #EEF6FB; --on-panel-soft: #9CC2DE;
+  --accent: #0F8C9C; --gold: #E6B33C; --rule: rgba(15, 140, 156, .25);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #07121F; --ink: #E4F0F5; --ink-soft: #8DA6B8;
+    --panel: #0F2C66; --on-panel: #E4F0F5; --on-panel-soft: #86AED0;
+    --accent: #4FD1D3; --gold: #E8BA4A; --rule: rgba(79, 209, 211, .25);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font: 17px/1.65 Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+.band {
+  background-color: var(--panel); color: var(--on-panel); padding: 40px 0 34px;
+  border-bottom: 3px solid var(--gold);
+  /* eight-pointed star tile, like the app's girih pattern */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M24 8l3.1 8.5 8.2-3.8-3.8 8.2L40 24l-8.5 3.1 3.8 8.2-8.2-3.8L24 40l-3.1-8.5-8.2 3.8 3.8-8.2L8 24l8.5-3.1-3.8-8.2 8.2 3.8z' fill='none' stroke='%239CC2DE' stroke-opacity='.22'/%3E%3C/svg%3E");
+}
+.brand {
+  font: 600 13px/1 -apple-system, system-ui, sans-serif; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gold); text-decoration: none;
+}
+h1 { font-size: 34px; line-height: 1.2; margin: 10px 0 8px; }
+.meta { margin: 0; color: var(--on-panel-soft); font: 15px/1.5 -apple-system, system-ui, sans-serif; }
+main { padding: 28px 20px 12px; }
+.lead { font-size: 20px; }
+h2 { font-size: 22px; margin: 32px 0 6px; }
+h3 { font-size: 18px; margin: 22px 0 4px; }
+a { color: var(--accent); }
+ul { padding-left: 22px; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 36px 0 8px; }
+.en { color: var(--ink-soft); font-size: 15px; }
+.foot { padding: 20px 20px 48px; font: 14px -apple-system, system-ui, sans-serif; color: var(--ink-soft); }
